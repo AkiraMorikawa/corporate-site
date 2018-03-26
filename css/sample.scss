@@ -490,10 +490,13 @@ h1{
 }
 
 #contents {
-    padding: 15px 0;
+    padding-top: 20px;
     @media (min-width: 550px){
       padding-top: 35px;
       padding-bottom: 70px;
+          #main{
+            padding-right: 20px;
+          }
     }
     
     #main h2 {
@@ -511,9 +514,13 @@ h1{
         @include fontsize(15);
         li{
           list-style: none;
+          @media (min-width: 551px) {
+            padding-bottom: 5px;
+          }
           span{
             display: block;
             color: $blue1;
+            font-weight: bold;
             @media (min-width: 551px) {
               display:inline-block;
               margin:0;
@@ -558,7 +565,25 @@ h1{
                 background-image: url("../images/news/side_arrow@2x.png");
             
               }
+              a{
+                text-decoration:none;
+              }
         }
       }
     }
+}
+
+
+#contents {
+  #main {
+    th, td{
+    padding: 20px 0;
+    color: #626262;
+    @include fontsize(14);}
+    th{
+      padding-right: 20px;
+    }
+    h2.company_title {
+    margin-bottom: 0px;}
+}
 }
